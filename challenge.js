@@ -2,11 +2,32 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // counter inner text
   let counter = document.querySelector("#counter")
-
-  // runs counter every second
+  
+  //timer increment every second once the page has loaded
   let count = setInterval(function () {
     counter.innerText++;
   }, 1000);
+
+  // DOM elements
+  let minus = document.getElementById("minus")
+  let plus = document.getElementById("plus")
+  let love = document.getElementById("heart")
+  let pause = document.getElementById("pause")
+  let likes = document.querySelector(".likes")
+
+
+  // minus button
+  minus.addEventListener("click", function(e){
+    counter.innerText--;
+  });
+
+  // plus button
+  plus.addEventListener("click", function(e){
+    counter.innerText++;
+  });
+
+   
+
 });
 
 
